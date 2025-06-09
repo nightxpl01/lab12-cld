@@ -1,4 +1,4 @@
-# Laboratorium 12 - Tworzenie przykładowego pliku docker-compose.yaml. Uruchamianie i weryfikacja działania aplikacji wielokontenerowej. Budowanie obrazów w Docker Compose - wprowadzenie.
+# Laboratorium 12 i 13 - Tworzenie przykładowego pliku docker-compose.yaml. Uruchamianie i weryfikacja działania aplikacji wielokontenerowej. Budowanie obrazów w Docker Compose - wprowadzenie.
 
 Polecenie:
 
@@ -40,6 +40,14 @@ Dodatkowo, należy dowieść, że:
  - stack LEMP działa poprawnie i wyświetla domyślnie wymaganą stronę,
 
  - można zainicjować testową bazę danych
+
+
+Lab 13:
+
+ - Wszystkie dane wykorzystywane przez aplikację LEMP, które mogą być uznane za wrażliwe,
+   należy skonfigurować jako secrets (analogicznie jak przykłady z pierwszej części tej
+   instrukcji)
+
 
 ## Inicjalizacja i sprzątanie
 
