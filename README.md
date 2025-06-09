@@ -4,28 +4,52 @@ Polecenie:
 
 
 Należy zbudować prosty plik docker-compose.yml, który pozwoli na uruchomienie znanego z innych zajęć, stack-a LEMP wraz z phpMyAdmin. Stack LEMP składa się z następujących usług składowych: 
+
 ---- L – dla Linux;
+
 ---- E – dla Nginx; 
+
 ---- M – dla MySQL; 
+
 ---- P – dla PHP.
+
 
 Aplikacja powinna zawierać cztery kontenery (mikrousługi):
 
 • jeden kontener dla Nginx, 
+
 • jeden kontener dla PHP (PHP-FPM), 
+
 • jeden kontener dla MySQL, 
+
 • jeden kontener dla phpMyAdmin.
 
+
 Założenia dla poszczególnych mikrousług:
+
 • serwery wykorzystują obrazy ze zdefiniowanym tag-iem, udostępniane na DockerHub 
+
 • serwery PHP, MySQL są przyłączone do sieci backend a Nginx do backend oraz frontend. Nginx ma wystawiony na świat zewnętrzy port 4001, 
+
 • serwer Nginx ma wyświetlać stronę startową php (index.php), 
+
 • serwer phpMyAdmin ma być dostępny na porcie 6001 i powinno być możliwe zalogowanie się do niego i założenie testowej bazy. Wobec tego proszę przemyśleć do której sieci powinien być dołączony i uzasadnić dlaczego.
+
 
 W sprawozdaniu proszę umieścić plik docker-compose.yaml. W piku README.md należy podać wszystkie użyte polecenia wraz z wynikiem ich działania. 
 Dodatkowo, należy dowieść, że: 
+
 • stack LEMP działa poprawnie i wyświetla domyślnie wymaganą stronę, 
+
 • można zainicjować testową bazę danych
+
+
+## Inicjalizacja i sprzątanie
+
+    docker compose --env-file .env up
+
+    docker compose down -v
+
 
 ## Finalny plik docker-compose
 
